@@ -1,5 +1,5 @@
-from final.constants import *
-from final.projector import project_3d_to_2d
+from constants import *
+from projector import project_3d_to_2d
 import pygame
 
 
