@@ -14,9 +14,6 @@ def project_3d_to_2d(point, camera):
     rotated_point = np.dot(rotation_matrix_x(camera.pitch), rotated_point)
     rotated_point = np.dot(rotation_matrix_z(camera.roll), rotated_point)
 
-    # Translate camera position
-    #rotated_point = rotated_point - camera.pos
-
     # Perspective projection
     x_final, y_final, z_final = rotated_point
     if z_final > 0:  # Prevent division by zero
