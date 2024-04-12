@@ -8,34 +8,37 @@ class Camera:
         self.rot_delta = rot_delta
 
     def move_forward(self):
-        self.position[2] += self.move_delta * 10
+        self.pos[2] += 10
 
     def move_backward(self):
-        self.position[2] -= self.move_delta * 10
+        self.pos[2] -= 10
 
     def move_left(self):
-        self.position[0] -= self.move_delta
+        self.pos[0] -= 10
 
     def move_right(self):
-        self.position[0] += self.move_delta
+        self.pos[0] += 10
 
     def move_up(self):
-        self.position[1] += self.move_delta
+        self.pos[1] += 10
 
     def move_down(self):
-        self.position[1] -= self.move_delta
+        self.pos[1] -= 10
 
     def rotate_up(self):
-        self.rotation[0] -= self.rot_delta
+        self.pitch += 0.1
 
     def rotate_down(self):
-        self.rotation[0] += self.rot_delta
+        self.pitch -= 0.1
 
     def rotate_left(self):
-        self.rotation[1] -= self.rot_delta
+        self.yaw += 0.1
 
     def rotate_right(self):
-        self.rotation[1] += self.rot_delta
+        self.yaw -= 0.1
 
-    def rotate_y(self, ry):
-        pass
+    def roll_right(self):
+        self.roll -= 0.1
+
+    def roll_left(self):
+        self.roll += 0.1
