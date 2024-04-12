@@ -1,13 +1,14 @@
+import pygame
+
 from constants import *
 from projector import project_3d_to_2d
-import pygame
 
 
 def draw_scene(camera, screen, vertices, edges):
     # project points to 2D
     projected_points = []
     for point in vertices:
-        projected_point = project_3d_to_2d(point, camera, SCREEN_WIDTH, SCREEN_HEIGHT, FOV)
+        projected_point = project_3d_to_2d(point, camera)
         projected_points.append(projected_point)
         if projected_point:
             pygame.draw.circle(screen, WHITE, projected_point, 5)

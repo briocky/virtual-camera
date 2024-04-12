@@ -1,8 +1,9 @@
 import numpy as np
 from rotator import rotation_matrix_x, rotation_matrix_y, rotation_matrix_z
+from constants import *
 
 
-def project_3d_to_2d(point, camera, SCREEN_WIDTH, SCREEN_HEIGHT, FOV):
+def project_3d_to_2d(point, camera):
     x, y, z = point
     x -= camera.pos[0]
     y -= camera.pos[1]
