@@ -19,7 +19,7 @@ def main():
     pitch = 0  # Pitch angle (rotation around x-axis)
     roll = 0  # roll angle
 
-    camera = Camera(camera_pos, yaw, pitch, roll)
+    camera = Camera(camera_pos, yaw, pitch, roll, FOV)
 
     vertices, edges = load_obj('c1.obj')  # scene
 

@@ -17,7 +17,7 @@ def project_3d_to_2d(point, camera):
     # Perspective projection
     x_final, y_final, z_final = rotated_point
     if z_final > 0:  # Prevent division by zero
-        scale = SCREEN_HEIGHT / (2 * np.tan(np.radians(FOV / 2)) * z_final)
+        scale = SCREEN_HEIGHT / (2 * np.tan(np.radians(camera.fov / 2)) * z_final)
         x_projected = int(SCREEN_WIDTH / 2 + x_final * scale)
         y_projected = int(SCREEN_HEIGHT / 2 - y_final * scale)
         return x_projected, y_projected

@@ -15,7 +15,8 @@ def draw_scene(camera, screen, vertices, edges):
 
     # draw connection lines
     for edge in edges:
-        start = projected_points[edge[0] - 1]
-        end = projected_points[edge[1] - 1]
+        start_index, end_index = edge[0] - 1, edge[1] - 1
+        start = projected_points[start_index]
+        end = projected_points[end_index]
         if start and end:
             pygame.draw.aaline(screen, WHITE, start[0:2], end[0:2], 2)

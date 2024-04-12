@@ -3,13 +3,15 @@ import numpy as np
 
 class Camera:
     # yaw, pitch, roll - in radians
-    def __init__(self, pos, yaw, pitch, roll, move_delta=10, rot_delta=0.1):
+    def __init__(self, pos, yaw, pitch, roll, fov, move_delta=10, rot_delta=0.1, fov_delta=10):
         self.pos = pos
         self.yaw = yaw
         self.pitch = pitch
         self.roll = roll
+        self.fov = fov
         self.move_delta = move_delta
         self.rot_delta = rot_delta
+        self.fov_delta = fov_delta
 
     def move_forward(self):
         self.pos += self.get_direction_vector() * self.move_delta
@@ -46,6 +48,12 @@ class Camera:
 
     def roll_left(self):
         self.roll += self.rot_delta
+
+    def increase_fov(self):
+        self.fov += self.fov_delta
+
+    def decrease_fov(self):
+        self.fov -= self.fov_delta
 
     def get_direction_vector(self):
         direction = np.array([

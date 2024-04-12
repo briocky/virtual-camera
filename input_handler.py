@@ -34,3 +34,7 @@ def handle_input(camera):
                 camera.roll_left()
             elif event.key == K_p:  # roll camera
                 camera.roll_right()
+            elif event.key == K_f:
+                camera.increase_fov()
+            elif event.key == K_g:
+                camera.decrease_fov()
