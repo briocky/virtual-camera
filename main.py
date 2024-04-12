@@ -14,7 +14,7 @@ def main():
     clock = pygame.time.Clock()
 
     # Define camera parameters
-    camera_pos = [400, 300, -500]  # Initial camera position
+    camera_pos = [250, 150, -200]  # Initial camera position
     yaw = 0  # Yaw angle (rotation around y-axis)
     pitch = 0  # Pitch angle (rotation around x-axis)
     roll = 0  # roll angle

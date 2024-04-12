@@ -17,4 +17,4 @@ def draw_scene(camera, screen, vertices, edges):
         start = projected_points[edge[0] - 1]
         end = projected_points[edge[1] - 1]
         if start and end:
-            pygame.draw.line(screen, WHITE, start[0:2], end[0:2], 2)
+            pygame.draw.aaline(screen, WHITE, start[0:2], end[0:2], 2)
